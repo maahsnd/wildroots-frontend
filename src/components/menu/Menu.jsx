@@ -1,5 +1,7 @@
 import styles from './menu.module.css';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { db } from '../../firebase-config';
+import { set, ref, onValue, remove, update } from 'firebase/database';
 
 function Menu() {
   const menuData = [
@@ -26,8 +28,22 @@ function Menu() {
       ]
     }
   ];
+
+  const [data, setData] = useState(null);
+
+  useEffect(() => {
+    onValue(ref(db), (snapshot) => {
+      const dataRead = snapshot.val();
+      console.log(dataRead);
+      if (dataRead != null) {
+        setData(dataRead);
+      }
+    });
+  }, []);
+
   return (
     <div className={styles.menuContainer}>
+      <h2>{data && data.test.menu}</h2>
       <h1 className={styles.menuTitle}>Menu</h1>
       {menuData.map((section) => (
         <ul className={styles.menuSection} key={section.sectionTitle}>

@@ -1,7 +1,5 @@
 import './App.css';
-import Menu from './components/menu/Menu';
-import dotenv from 'dotenv';
-dotenv.config();
+import Menu from './components/Menu/Menu';
 
 function App() {
   return <Menu />;
