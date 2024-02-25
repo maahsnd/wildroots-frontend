@@ -28,6 +28,31 @@
   align-items: flex-start;
 }
 
+.photo {
+  max-width: 400px;
+  height: auto;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.photo {
+  margin: 10px;
+}
+
+.image {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.caption {
+  margin-top: 5px;
+  text-align: center;
+}
+
 @media (max-width: 1100px) {
   .sectionTitleContainer {
     flex-direction: column;

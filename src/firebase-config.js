@@ -1,8 +1,8 @@
 import { initializeApp } from 'firebase/app';
-import { getAnalytics } from 'firebase/analytics';
 import { getDatabase } from 'firebase/database';
-// https://firebase.google.com/docs/web/setup#available-libraries
+import { getStorage } from 'firebase/storage'; // Import getStorage method
 
+// Firebase configuration object
 const firebaseConfig = {
   apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
   authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
@@ -13,10 +13,14 @@ const firebaseConfig = {
   measurementId: import.meta.env.VITE_FIREBASE_APP_MEASUREMENT_ID
 };
 
-// Initialize Firebase
+// Initialize Firebase app
 const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
 
+// Initialize Firebase Realtime Database
 const db = getDatabase(app);
 
-export { app, analytics, db };
+// Initialize Firebase Storage
+const storage = getStorage(app);
+
+// Export the Firebase app, Realtime Database, and Storage
+export { app, db, storage };
