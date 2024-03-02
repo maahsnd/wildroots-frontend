@@ -8,14 +8,16 @@ const Nav = () => {
   return (
     <nav className={styles.navbar}>
       <div className={styles.container}>
-        <h1 className={styles.siteTitle}>Wild Roots Farm and Kitchen</h1>
-        <div className={styles.logo}></div>
-        <div
-          className={styles.menuIcon}
-          onClick={() => setShowNavbar(!showNavbar)}
-        >
-          <img src="" alt="img" />
+        <div className={styles.logoContainer}>
+          <h1 className={styles.siteTitle}>Wild Roots Farm and Kitchen</h1>
+          <div
+            className={styles.menuIcon}
+            onClick={() => setShowNavbar(!showNavbar)}
+          >
+            <img src="" alt="img" />
+          </div>
         </div>
+
         <div className={`${styles.navElements} ${showNavbar && styles.active}`}>
           <ul>
             <li>

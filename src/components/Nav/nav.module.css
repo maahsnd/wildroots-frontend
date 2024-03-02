@@ -7,25 +7,32 @@
   margin: 0;
   padding: 0 15px;
   display: flex;
-  justify-content: flex-start;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
   height: 100%;
 }
 
+.logoContainer {
+  display: flex;
+  align-items: center;
+}
+
 .navbar {
-  height: 60px;
+  height: 120px;
   background-color: #fef7e5;
   position: relative;
 }
 
 .menuIcon {
   display: none;
-  height: 50px;
-  width: 50px;
+  height: min-content;
+  width: min-content;
+  margin: 10px;
 }
 
 .navElements {
-  width: 50%;
+  width: 100%;
 }
 
 .navElements ul {
@@ -35,7 +42,7 @@
   padding: 0;
 }
 
-.navElements ul li:not(:last-child) {
+.navElements ul li {
   margin-right: 60px;
 }
 
@@ -73,6 +80,9 @@
 }
 
 @media (max-width: 600px) {
+  .navbar {
+    height: 60px;
+  }
   .menuIcon {
     display: block;
     cursor: pointer;
@@ -82,10 +92,10 @@
     position: absolute;
     left: 0;
     top: 60px;
-    background-color: transparent;
+    background-color: #fef7e5;
     width: 0px;
     height: calc(100vh - 60px);
-    transition: all 0.5s ease-out;
+    transition: all 0.2s ease;
     overflow: hidden;
   }
 
