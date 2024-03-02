@@ -13,7 +13,7 @@ function Menu() {
   const [photos, setPhotos] = useState([]);
   const [captions, setCaptions] = useState({});
 
-  useEffect(() => {
+  /*   useEffect(() => {
     const fetchMenu = async () => {
       try {
         const menuRef = dbRef(db, 'menu');
@@ -40,7 +40,7 @@ function Menu() {
     };
 
     fetchMenu();
-  }, []);
+  }, []); */
 
   const fetchPhotoUrls = async () => {
     try {
