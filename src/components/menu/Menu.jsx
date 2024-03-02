@@ -1,49 +1,104 @@
-import styles from './menu.module.css';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { db, storage } from '../../firebase-config';
+import { ref as dbRef, onValue as onDbValue } from 'firebase/database';
+import {
+  listAll as listAllFiles,
+  getDownloadURL,
+  ref as storageRef
+} from 'firebase/storage'; // Import ref from storage
+import styles from './menu.module.css'; // Import CSS module
 
 function Menu() {
-  const menuData = [
-    {
-      sectionTitle: 'Soups',
-      sectionDetail: 'Available in quarts $18 or half gallons $28',
-      sectionItems: [
-        {
-          itemTitle: 'Tuscan White Bean and Kale (Vegan and Gluten Free)',
-          itemDescription:
-            ' A rustic Italian soup filed with vegetables and white cannellini'
-        }
-      ]
-    },
-    {
-      sectionTitle: 'Salads',
-      sectionDetail: 'small $10 large $15',
-      sectionItems: [
-        {
-          itemTitle: 'Autumn Panzanella (Vegan)',
-          itemDescription:
-            'A Tuscan chopped Salad that incorporates house baked bread soaked in balsamic vinegar to season the roasted vegetables such as kale, beets, brussels sprouts and butternut squash'
-        }
-      ]
+  const [menu, setMenu] = useState(null);
+  const [photos, setPhotos] = useState([]);
+  const [captions, setCaptions] = useState({});
+
+  /*   useEffect(() => {
+    const fetchMenu = async () => {
+      try {
+        const menuRef = dbRef(db, 'menu');
+        onDbValue(menuRef, (snapshot) => {
+          const menuData = snapshot.val();
+          if (menuData) {
+            setMenu(menuData);
+          }
+        });
+
+        const photoUrls = await fetchPhotoUrls();
+        setPhotos(photoUrls);
+
+        const captionsRef = dbRef(db, 'photo-captions');
+        onDbValue(captionsRef, (snapshot) => {
+          const captionsData = snapshot.val();
+          if (captionsData) {
+            setCaptions(captionsData);
+          }
+        });
+      } catch (error) {
+        console.error('Error fetching menu data:', error);
+      }
+    };
+
+    fetchMenu();
+  }, []); */
+
+  const fetchPhotoUrls = async () => {
+    try {
+      const folderRef = storageRef(storage, 'menuPhotos'); // Use storageRef to reference the storage folder
+      const files = await listAllFiles(folderRef);
+      const urls = await Promise.all(
+        files.items.map(async (fileRef) => {
+          const url = await getDownloadURL(fileRef);
+          return { id: fileRef.name.split('.')[0], url };
+        })
+      );
+      return urls;
+    } catch (error) {
+      console.error('Error fetching photo URLs:', error);
+      return [];
     }
-  ];
+  };
+
   return (
     <div className={styles.menuContainer}>
       <h1 className={styles.menuTitle}>Menu</h1>
-      {menuData.map((section) => (
-        <ul className={styles.menuSection} key={section.sectionTitle}>
-          <div className={styles.sectionTitleContainer}>
-            <h2 className={styles.sectionTitle}>{section.sectionTitle}</h2>
-            <p className={styles.sectionDetail}>{section.sectionDetail}</p>
-          </div>
-
-          {section.sectionItems.map((item) => (
-            <li className={styles.dishContainer} key={item.itemTitle}>
-              <h3 className={styles.dishTitle}>{item.itemTitle}</h3>
-              <p className={styles.dishDescription}>{item.itemDescription}</p>
-            </li>
+      {menu ? (
+        <>
+          {/* Display menu content */}
+          {menu.sections.map((section) => (
+            <div key={section.sectionTitle}>
+              <h2>{section.sectionTitle}</h2>
+              <p>{section.sectionDetail}</p>
+              {/* Display items for this section */}
+              <ul>
+                {menu.items
+                  .filter((item) => item.itemSection === section.sectionTitle)
+                  .map((item) => (
+                    <li key={item.itemTitle}>
+                      <h3>{item.itemTitle}</h3>
+                      <p>{item.itemDescription}</p>
+                    </li>
+                  ))}
+              </ul>
+            </div>
           ))}
-        </ul>
-      ))}
+          {/* Display photos and captions */}
+          <div className={styles.gallery}>
+            {photos.map((photo) => (
+              <div key={photo.id} className={styles.photo}>
+                <img
+                  src={photo.url}
+                  alt={`Uploaded ${photo.id}`}
+                  className={styles.image}
+                />
+                <p className={styles.caption}>{captions[photo.id]}</p>
+              </div>
+            ))}
+          </div>
+        </>
+      ) : (
+        <p>Loading...</p>
+      )}
     </div>
   );
 }
