@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import styles from './nav.module.css'; // Import CSS module
+import styles from './nav.module.css';
+import MenuIcon from '../../assets/menu-icon.svg?react';
 
 const Nav = () => {
   const [showNavbar, setShowNavbar] = useState(false);
@@ -14,7 +15,7 @@ const Nav = () => {
             className={styles.menuIcon}
             onClick={() => setShowNavbar(!showNavbar)}
           >
-            <img src="" alt="img" />
+            <MenuIcon />
           </div>
         </div>
 

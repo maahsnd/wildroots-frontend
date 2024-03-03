@@ -16,6 +16,8 @@
 .logoContainer {
   display: flex;
   align-items: center;
+  width: 100%;
+  justify-content: space-around;
 }
 
 .navbar {
@@ -28,7 +30,7 @@
   display: none;
   height: min-content;
   width: min-content;
-  margin: 10px;
+  margin-bottom: -5px;
 }
 
 .navElements {
