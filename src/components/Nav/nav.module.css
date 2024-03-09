@@ -88,6 +88,10 @@
   .navbar {
     height: 60px;
   }
+
+  .siteTitle{
+    font-size: large;
+  }
   .menuIcon {
     display: block;
     cursor: pointer;
