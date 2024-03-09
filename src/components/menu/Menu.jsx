@@ -25,16 +25,6 @@ function Menu() {
             setMenu(menuData);
           }
         });
-
-        const photoUrls = await fetchPhotoUrls();
-
-        // See https://www.npmjs.com/package/react-image-gallery for available properties
-         const processedUrls = photoUrls.map((photo) => {
-          return ({ original: photo.url,  originalHeight: '400px', loading: 'lazy'}); 
-        });
-
-        setPhotos(processedUrls); 
-
       } catch (error) {
         console.error('Error fetching menu data:', error);
       }
@@ -43,22 +33,30 @@ function Menu() {
     fetchMenu();
   }, []);
 
-  const fetchPhotoUrls = async () => {
-    try {
-      const folderRef = storageRef(storage, 'menuPhotos'); // Use storageRef to reference the storage folder
-      const files = await listAllFiles(folderRef);
-      const urls = await Promise.all(
-        files.items.map(async (fileRef) => {
-          const url = await getDownloadURL(fileRef);
-          return { id: fileRef.name.split('.')[0], url };
-        })
-      );
-      return urls;
-    } catch (error) {
-      console.error('Error fetching photo URLs:', error);
-      return [];
-    }
-  };
+  useEffect(() => {
+    const fetchPhotoUrls = async () => {
+      try {
+        const folderRef = storageRef(storage, 'menuPhotos'); // Use storageRef to reference the storage folder
+        const files = await listAllFiles(folderRef);
+        const urls = await Promise.all(
+          files.items.map(async (fileRef) => {
+            const url = await getDownloadURL(fileRef);
+            return {
+              original: url,
+              originalHeight: '400px',
+              loading: 'lazy'
+            };
+          })
+        );
+        setPhotos(urls);
+        return;
+      } catch (error) {
+        console.error('Error fetching photo URLs:', error);
+        return [];
+      }
+    };
+    fetchPhotoUrls();
+  }, []);
 
   return (
     <div className={styles.menuContainer}>
@@ -89,10 +87,14 @@ function Menu() {
               </ul>
             </div>
           ))}
-          <div className={styles.imageGalleryContainer}>  {photos.length ? <ImageGallery items={photos} /> : <></>}</div>
-        
-          
-   
+          <div className={styles.imageGalleryContainer}>
+            {' '}
+            {photos.length ? (
+              <ImageGallery items={photos} />
+            ) : (
+              <>Loading photos</>
+            )}
+          </div>
         </>
       ) : (
         <p>Loading...</p>
