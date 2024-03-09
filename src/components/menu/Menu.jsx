@@ -89,7 +89,8 @@ console.log(processedUrls)
               </ul>
             </div>
           ))}
-          {photos.length ? <ImageGallery items={photos} /> : <></>}
+          <div className={styles.imageGalleryContainer}>  {photos.length ? <ImageGallery items={photos} /> : <></>}</div>
+        
           
    
         </>
