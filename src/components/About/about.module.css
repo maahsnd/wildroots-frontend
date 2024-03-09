@@ -1,0 +1,16 @@
+.aboutContainer {
+  margin: 40px 5%;
+  width: 90%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.aboutTextContainer {
+  width: 50%;
+  margin-top: 20px;
+  font-size: large;
+  text-align: center;
+}
