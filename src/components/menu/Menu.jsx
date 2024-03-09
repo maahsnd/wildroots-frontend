@@ -32,7 +32,7 @@ function Menu() {
          const processedUrls = photoUrls.map((photo) => {
           return ({ original: photo.url,  originalHeight: '400px', loading: 'lazy'}); 
         });
-console.log(processedUrls)
+
         setPhotos(processedUrls); 
 
       } catch (error) {
@@ -65,7 +65,7 @@ console.log(processedUrls)
       <h1 className={styles.menuTitle}></h1>
       {menu ? (
         <>
-          {/* Display menu content */}
+          {/* Display menu section content */}
           {menu.sections.map((section) => (
             <div key={section.sectionTitle} className={styles.sectionContainer}>
               <div className={styles.sectionTitleContainer}>
