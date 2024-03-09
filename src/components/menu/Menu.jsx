@@ -7,6 +7,7 @@ import {
   ref as storageRef
 } from 'firebase/storage';
 import styles from './menu.module.css';
+import 'react-image-gallery/styles/css/image-gallery.css';
 import ImageGallery from 'react-image-gallery';
 
 function Menu() {
@@ -26,12 +27,13 @@ function Menu() {
         });
 
         const photoUrls = await fetchPhotoUrls();
-        // store each photo at obj in array [{original: url, description: caption, id: id}]
-        const processedUrls = photoUrls.forEach((photo) => {
-          return { original: photo.url, description: '', id: photo.id };
-        });
 
-        setPhotos(processedUrls);
+        // See https://www.npmjs.com/package/react-image-gallery for available properties
+         const processedUrls = photoUrls.map((photo) => {
+          return ({ original: photo.url,  originalHeight: '400px', loading: 'lazy'}); 
+        });
+console.log(processedUrls)
+        setPhotos(processedUrls); 
 
       } catch (error) {
         console.error('Error fetching menu data:', error);
@@ -87,8 +89,8 @@ function Menu() {
               </ul>
             </div>
           ))}
-
-          <ImageGallery items={photos} />
+          {photos.length ? <ImageGallery items={photos} /> : <></>}
+          
    
         </>
       ) : (
