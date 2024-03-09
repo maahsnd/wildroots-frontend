@@ -67,7 +67,7 @@ console.log(processedUrls)
         <>
           {/* Display menu content */}
           {menu.sections.map((section) => (
-            <div key={section.sectionTitle}>
+            <div key={section.sectionTitle} className={styles.sectionContainer}>
               <div className={styles.sectionTitleContainer}>
                 <h2 className={styles.sectionTitle}>{section.sectionTitle}</h2>
                 <p className={styles.sectionDetail}>{section.sectionDetail}</p>

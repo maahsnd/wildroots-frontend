@@ -1,6 +1,9 @@
 .siteTitle {
-  font-size: large;
-  color: skyblue;
+  font-size: xx-large;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-style: oblique;
+  margin: 10px 0 30px;
+  color: #792e1b;
 }
 
 .container {
@@ -22,7 +25,7 @@
 
 .navbar {
   height: 120px;
-  background-color: #fef7e5;
+  background-color: #e9eff1;
   position: relative;
 }
 
