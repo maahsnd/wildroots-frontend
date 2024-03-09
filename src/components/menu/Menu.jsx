@@ -5,18 +5,19 @@ import {
   listAll as listAllFiles,
   getDownloadURL,
   ref as storageRef
-} from 'firebase/storage'; // Import ref from storage
-import styles from './menu.module.css'; // Import CSS module
+} from 'firebase/storage';
+import styles from './menu.module.css';
+import ImageGallery from 'react-image-gallery';
 
 function Menu() {
   const [menu, setMenu] = useState(null);
   const [photos, setPhotos] = useState([]);
-  const [captions, setCaptions] = useState({});
 
   useEffect(() => {
     const fetchMenu = async () => {
       try {
         const menuRef = dbRef(db, 'menu');
+
         onDbValue(menuRef, (snapshot) => {
           const menuData = snapshot.val();
           if (menuData) {
@@ -25,15 +26,13 @@ function Menu() {
         });
 
         const photoUrls = await fetchPhotoUrls();
-        setPhotos(photoUrls);
-
-        const captionsRef = dbRef(db, 'photo-captions');
-        onDbValue(captionsRef, (snapshot) => {
-          const captionsData = snapshot.val();
-          if (captionsData) {
-            setCaptions(captionsData);
-          }
+        // store each photo at obj in array [{original: url, description: caption, id: id}]
+        const processedUrls = photoUrls.forEach((photo) => {
+          return { original: photo.url, description: '', id: photo.id };
         });
+
+        setPhotos(processedUrls);
+
       } catch (error) {
         console.error('Error fetching menu data:', error);
       }
@@ -61,40 +60,36 @@ function Menu() {
 
   return (
     <div className={styles.menuContainer}>
-      <h1 className={styles.menuTitle}>Menu</h1>
+      <h1 className={styles.menuTitle}></h1>
       {menu ? (
         <>
           {/* Display menu content */}
           {menu.sections.map((section) => (
             <div key={section.sectionTitle}>
-              <h2>{section.sectionTitle}</h2>
-              <p>{section.sectionDetail}</p>
+              <div className={styles.sectionTitleContainer}>
+                <h2 className={styles.sectionTitle}>{section.sectionTitle}</h2>
+                <p className={styles.sectionDetail}>{section.sectionDetail}</p>
+              </div>
+
               {/* Display items for this section */}
               <ul>
+                <hr />
                 {menu.items
                   .filter((item) => item.itemSection === section.sectionTitle)
                   .map((item) => (
                     <li key={item.itemTitle}>
-                      <h3>{item.itemTitle}</h3>
-                      <p>{item.itemDescription}</p>
+                      <h3 className={styles.itemTitle}>{item.itemTitle}</h3>
+                      <p className={styles.itemDescription}>
+                        {item.itemDescription}
+                      </p>
                     </li>
                   ))}
               </ul>
             </div>
           ))}
-          {/* Display photos and captions */}
-          <div className={styles.gallery}>
-            {photos.map((photo) => (
-              <div key={photo.id} className={styles.photo}>
-                <img
-                  src={photo.url}
-                  alt={`Uploaded ${photo.id}`}
-                  className={styles.image}
-                />
-                <p className={styles.caption}>{captions[photo.id]}</p>
-              </div>
-            ))}
-          </div>
+
+          <ImageGallery items={photos} />
+   
         </>
       ) : (
         <p>Loading...</p>
