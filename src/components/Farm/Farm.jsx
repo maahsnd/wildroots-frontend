@@ -61,7 +61,10 @@ function Farm() {
   return (
     <div className={styles.farmContainer}>
       <div className={styles.farmInfoContainer}>
-        <h3>Wild roots farm is ... permanent, static description...</h3>
+        <h3>
+          Wild roots farm is located at ... other details from permanent, static
+          description...
+        </h3>
       </div>
       {content && (
         <>
