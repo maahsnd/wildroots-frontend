@@ -7,9 +7,11 @@ const Nav = () => {
   const [showNavbar, setShowNavbar] = useState(false);
 
   return (
-    <nav className={styles.navbar}>
-      <div className={styles.container}>
-        <div className={styles.logoContainer}>
+    <nav className={`${styles.navbar} ${showNavbar && styles.active}`}>
+      <div className={`${styles.container} ${showNavbar && styles.active}`}>
+        <div
+          className={`${styles.logoContainer} ${showNavbar && styles.active}`}
+        >
           <NavLink to="/" className={styles.siteTitle}>
             Wild Roots Farm and Kitchen
           </NavLink>

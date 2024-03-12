@@ -24,3 +24,9 @@ hr {
   background-color: #792e1b;
   height: 2px;
 }
+
+@media (max-width: 600px) {
+  .homePhoto {
+    display: none;
+  }
+}
