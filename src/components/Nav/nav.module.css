@@ -1,8 +1,13 @@
 .siteTitle {
   font-size: xx-large;
-  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+    'Lucida Sans', Arial, sans-serif;
   font-style: oblique;
   margin: 10px 0 30px;
+  color: #792e1b;
+}
+
+.siteTitle:hover {
   color: #792e1b;
 }
 
@@ -89,7 +94,7 @@
     height: 60px;
   }
 
-  .siteTitle{
+  .siteTitle {
     font-size: large;
   }
   .menuIcon {

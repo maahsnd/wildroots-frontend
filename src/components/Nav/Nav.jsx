@@ -10,7 +10,9 @@ const Nav = () => {
     <nav className={styles.navbar}>
       <div className={styles.container}>
         <div className={styles.logoContainer}>
-          <h1 className={styles.siteTitle}>Wild Roots Farm and Kitchen</h1>
+          <NavLink to="/" className={styles.siteTitle}>
+            Wild Roots Farm and Kitchen
+          </NavLink>
           <div
             className={styles.menuIcon}
             onClick={() => setShowNavbar(!showNavbar)}
