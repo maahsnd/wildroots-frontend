@@ -1,7 +1,7 @@
 .siteTitle {
   font-size: xx-large;
   font-style: oblique;
-  margin: 30px 0;
+  margin: 40px 0 20px;
   color: #792e1b;
 }
 
@@ -65,14 +65,12 @@
 .navElements {
   width: 100vh;
   height: 100vw;
-  background-color: #792e1b;
   display: flex;
   justify-content: center;
   align-items: flex-start;
 }
 
 .navElements ul {
-  margin-top: 30px;
   display: flex;
   justify-content: center;
   list-style-type: none;
@@ -80,13 +78,13 @@
 }
 
 .navElements ul li {
-  margin: 15px;
+  margin: 5px 15px;
 }
 
 .navElements ul a {
   font-size: 22px;
   font-weight: 400;
-  color: white;
+  color: black;
   text-decoration: none;
 }
 
@@ -114,7 +112,7 @@
   }
 
   .siteTitle {
-    font-size: x-large;
+    font-size: 22px;
     margin: 0px 0px 10px;
   }
   .menuIcon {
@@ -131,6 +129,7 @@
     margin-right: 30px;
   }
   .navElements {
+    background-color: #792e1b;
     position: absolute;
     left: 0;
     top: 0px;
@@ -153,5 +152,9 @@
     margin-right: unset;
     margin-top: 22px;
     margin-left: 20px;
+  }
+
+  .navElements ul a {
+    color: white;
   }
 }
