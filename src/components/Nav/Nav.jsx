@@ -17,7 +17,11 @@ const Nav = () => {
             className={styles.menuIcon}
             onClick={() => setShowNavbar(!showNavbar)}
           >
-            <MenuIcon />
+            <div className={styles.menuIconFrame}>
+              <span className={styles.menuIconBars}></span>
+              <span className={styles.menuIconBars}></span>
+              <span className={styles.menuIconBars}></span>
+            </div>
           </div>
         </div>
 
