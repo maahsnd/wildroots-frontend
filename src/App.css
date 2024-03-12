@@ -1,6 +1,13 @@
+/* Font Family */
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+
+/* Root Level Font */
 #root {
   height: 100vh;
   width: 100vw;
   margin: 0;
   background-color: #e9eff1;
+  font-family: 'Lora', serif;
+  font-weight: 400;
+  font-size: 16px;
 }
