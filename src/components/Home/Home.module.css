@@ -1,5 +1,5 @@
 .homeContainer {
-  margin: 5px 0px;
+  margin: 0px;
   width: calc(100% - 10px);
   height: min-content;
   display: flex;
