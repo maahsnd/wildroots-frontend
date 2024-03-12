@@ -57,15 +57,6 @@ const Nav = () => {
                 About
               </NavLink>
             </li>
-            <li>
-              <NavLink
-                to="/contact"
-                className={({ isActive }) => (isActive ? styles.active : '')}
-                onClick={() => setShowNavbar(false)}
-              >
-                Contact
-              </NavLink>
-            </li>
           </ul>
         </div>
       </div>
