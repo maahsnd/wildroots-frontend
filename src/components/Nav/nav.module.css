@@ -21,7 +21,6 @@
 
 .navbar {
   height: min-content;
-  background-color: #e9eff1;
   position: relative;
 }
 
@@ -100,7 +99,6 @@
     position: absolute;
     left: 0;
     top: 60px;
-    background-color: #fef7e5;
     width: 0px;
     height: calc(100vh - 60px);
     transition: all 0.2s ease;

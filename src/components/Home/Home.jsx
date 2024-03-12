@@ -28,7 +28,11 @@ function Home() {
 
   return (
     <div className={styles.homeContainer}>
-      <img src="https://source.unsplash.com/DUPFowqI6oI" alt="cant load" />
+      <img
+        className={styles.homePhoto}
+        src="https://source.unsplash.com/DUPFowqI6oI"
+        alt="Generic pastoral photo"
+      />
       <div className={styles.homeTextContainer}>
         <p>
           Whole food menus that are organic, seasonally focused and locally
