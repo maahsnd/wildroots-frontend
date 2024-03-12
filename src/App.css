@@ -1,11 +1,15 @@
-/* Font Family */
-@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+@font-face {
+  font-family: 'PlatypiLight';
+  src: url('./assets/Platypi-Light.ttf') format('truetype');
+}
 
 /* Root Level Font */
 #root {
+  font-family: 'PlatypiLight', serif;
   height: 100vh;
   width: 100vw;
-  margin: 0;
-  font-family: 'Lora', serif;
+  margin: 1px;
+  font-weight: 400;
   font-size: 16px;
+  word-break: normal;
 }

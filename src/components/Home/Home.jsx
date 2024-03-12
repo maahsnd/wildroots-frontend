@@ -35,8 +35,13 @@ function Home() {
       />
       <div className={styles.homeTextContainer}>
         <p>
-          Whole food menus that are organic, seasonally focused and locally
-          sourced, prepared from scratch by hand.
+          Here at Wild Roots kitchen, located on beautiful Vashon Island, we
+          focus on making Seasonal, Farm to Table food, most of which is grown
+          on site in the Wild Roots Garden. We offer a wide variety of Soups,
+          Salads, Sandwiches, Prepared Meals and Desserts inspired by what is in
+          peak season in our gardens. Look for us at the Vashon Farmers Market,
+          check out what's in our Farm Stand or find our weekly Menus on
+          Facebook and place an order. We look forward to feeding you!
         </p>
         <hr />
         <p>Our weekly menu is posted under the menu tab every Sunday.</p>
