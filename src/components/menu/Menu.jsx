@@ -44,7 +44,9 @@ function Menu() {
             return {
               original: url,
               originalHeight: '400px',
-              loading: 'lazy'
+              originalWidth: '600px',
+              loading: 'lazy',
+              showFullscreenButton: false
             };
           })
         );
