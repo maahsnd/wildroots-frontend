@@ -1,7 +1,7 @@
 .siteTitle {
   font-size: xx-large;
   font-style: oblique;
-  margin: 10px 0 30px;
+  margin: 30px 0;
   color: #792e1b;
 }
 
@@ -16,7 +16,13 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100%;
+  height: min-content;
+}
+
+.navbar {
+  height: min-content;
+  background-color: #e9eff1;
+  position: relative;
 }
 
 .logoContainer {
@@ -24,12 +30,6 @@
   align-items: center;
   width: 100%;
   justify-content: space-around;
-}
-
-.navbar {
-  height: 120px;
-  background-color: #e9eff1;
-  position: relative;
 }
 
 .menuIcon {
@@ -45,17 +45,13 @@
 
 .navElements ul {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   list-style-type: none;
   padding: 0;
 }
 
 .navElements ul li {
-  margin-right: 60px;
-}
-
-.navElements ul li :first-child {
-  margin-left: 60px;
+  margin: 15px;
 }
 
 .navElements ul a {
@@ -93,7 +89,7 @@
   }
 
   .siteTitle {
-    font-size: large;
+    font-size: x-large;
   }
   .menuIcon {
     display: block;
