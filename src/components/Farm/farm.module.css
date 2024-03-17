@@ -1,18 +1,39 @@
 .farmContainer {
-  margin: 40px 5%;
-  width: 90%;
-  height: 80%;
+  margin: 20px 0 40px;
+  width: calc(100% - 20px);
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
 }
 
+.farmStandInfoContainer {
+  font-family: 'PlatypiMedium';
+}
+
 .farmStandMenuContainer {
   align-items: center;
   display: flex;
   flex-direction: column;
-  margin-bottom: 20px;
+  margin: 20px 0 40px;
+  width: 100%;
+}
+
+.farmTitle,
+.textContainer > h4 {
+  font-size: 20px;
+  font-family: 'PlatypiMedium';
+  text-align: center;
+}
+
+.farmTitle,
+.farmText {
+  margin: 10px;
+}
+
+.farmText {
+  width: 100%;
+  text-align: left;
 }
 
 .textContainer {
@@ -24,4 +45,23 @@ hr {
   color: black;
   height: 2px;
   width: 100%;
+}
+
+.farmStandMenuContainer > .imageGalleryContainer {
+  border: 3px solid #792e1b;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+  margin-top: 60px;
+}
+
+.farmStandMenuContainer > .imageGalleryContainer > img {
+  object-fit: contain;
+  object-fit: scale-down;
+  height: 400px;
+}
+
+.farmMiscellaneousContainer {
+  border: #792e1b 2px solid;
+  padding: 10px;
+  width: 90%;
 }

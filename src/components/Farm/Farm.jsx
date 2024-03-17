@@ -44,7 +44,9 @@ function Farm() {
             return {
               original: url,
               originalHeight: '400px',
-              loading: 'lazy'
+              originalWidth: '600px',
+              loading: 'lazy',
+              showFullscreenButton: false
             };
           })
         );
@@ -61,30 +63,37 @@ function Farm() {
   return (
     <div className={styles.farmContainer}>
       <div className={styles.farmInfoContainer}>
-        <h3>
-          Wild roots farm is located at ... other details from permanent, static
-          description...
-        </h3>
+        <h3 className={styles.farmTitle}>Local Food For Local Folks!</h3>
+        <p className={styles.farmText}>
+          At Wild Roots Farm and Garden we take joy in producing locally grown
+          Vegetables, Fruits, Herbs and Flowers that are used at Wild Roots
+          Kitchen and offered to the community in our Farm Stand. Seasonal
+          produce is grown using organic and permaculture methods that make the
+          most of our Northwest Climate and habitats. We are excited to share
+          what we grow with our community, and hope to see you soon.
+        </p>
       </div>
       {content && (
         <>
           <div className={styles.farmStandInfoContainer}>
-            <p>{content[0].description}</p>
+            <p className={styles.farmText}>{content[0].description}</p>
           </div>
           <hr />
           <div className={styles.farmStandMenuContainer}>
             <div className={styles.textContainer}>
-              <h4>Current offerings</h4>
-              <p>{content[1].description}</p>
+              <h4 className={styles.farmText}>Current offerings</h4>
+              <p className={styles.farmText}> {content[1].description}</p>
             </div>
-            <ReactImageGallery items={photos} />
+            <div className={styles.imageGalleryContainer}>
+              <ReactImageGallery items={photos} />
+            </div>
           </div>
 
           {content.length > 2 ? (
             <>
               <hr />
               <div className={styles.farmMiscellaneousContainer}>
-                <p>{content[2].description}</p>
+                <p className={styles.farmText}>{content[2].description}</p>
               </div>
             </>
           ) : (
