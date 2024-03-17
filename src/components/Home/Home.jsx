@@ -34,18 +34,11 @@ function Home() {
         alt="Generic pastoral photo"
       />
       <div className={styles.homeTextContainer}>
-        <p>
+        <p className={styles.homeMainCaption}>
           Here at Wild Roots kitchen, located on beautiful Vashon Island, we
           focus on making Seasonal, Farm to Table food, most of which is grown
           on site in the Wild Roots Garden.
         </p>
-        {/*   <p>
-          {' '}
- 
- check out what's in our Farm
-          Stand or find our weekly Menus on Facebook and place an order. We look
-          forward to feeding you!
-        </p> */}
         <hr />
         <div className={styles.galleryContainer}>
           <div className={styles.galleryItem}>
@@ -73,7 +66,10 @@ function Home() {
           </div>
         </div>
         <hr />
-        <p>Our weekly menu is posted under the menu tab every Sunday.</p>
+        <div className={styles.menuBlurb}>
+          <p>Our weekly menu is posted under the menu tab every Sunday.</p>
+          <p>We look forward to feeding you!</p>
+        </div>
       </div>
     </div>
   );

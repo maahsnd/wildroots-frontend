@@ -20,6 +20,11 @@
   text-align: center;
 }
 
+.homeMainCaption {
+  font-size: 20px;
+  margin: 10px 0 30px;
+}
+
 .galleryContainer {
   margin: 60px 0 30px;
   display: flex;
@@ -53,6 +58,10 @@
 hr {
   background-color: #792e1b;
   height: 2px;
+}
+
+.menuBlurb {
+  margin: 30px 0;
 }
 
 @media (max-width: 600px) {
