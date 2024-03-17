@@ -134,7 +134,7 @@
     left: 0;
     top: 0px;
     width: 0px;
-    height: calc(100vh - 60px);
+    height: 100vh;
     transition: all 0.2s ease;
     overflow: hidden;
   }
