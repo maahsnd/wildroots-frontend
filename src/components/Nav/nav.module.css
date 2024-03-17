@@ -19,11 +19,6 @@
   height: 160px;
 }
 
-.transparent {
-  background-color: #ffffff55 !important; /* Ensure it overrides any other background color */
-  box-shadow: none; /* Remove box shadow when transparent */
-}
-
 .logoContainer {
   display: flex;
   align-items: center;

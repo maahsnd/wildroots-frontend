@@ -4,30 +4,9 @@ import styles from './nav.module.css';
 
 const Nav = () => {
   const [showNavbar, setShowNavbar] = useState(false);
-  const [isTransparent, setIsTransparent] = useState(true);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollTop =
-        window.pageYOffset || document.documentElement.scrollTop;
-      if (scrollTop > 50) {
-        setIsTransparent(true); // Set transparent background
-      } else {
-        setIsTransparent(false); // Set original background color
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
 
   return (
-    <nav
-      className={`${styles.navbar} ${isTransparent ? styles.transparent : ''}`}
-    >
+    <nav className={`${styles.navbar} `}>
       <div className={`${styles.container}`}>
         <div className={`${styles.logoContainer}`}>
           <NavLink to="/" className={styles.siteTitle}>
