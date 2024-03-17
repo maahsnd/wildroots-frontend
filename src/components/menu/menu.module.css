@@ -4,6 +4,16 @@
   align-items: center;
   margin: 0 2.5%;
 }
+
+.orderingInstructions {
+  border: #792e1b 3px solid;
+  padding: 10px;
+  width: calc(90% - 20px);
+  max-width: calc(850px - 20px);
+  margin-bottom: 20px;
+  font-family: 'PlatypiLightItalic';
+}
+
 .menuSection {
   display: flex;
   flex-direction: column;
@@ -19,19 +29,20 @@
 }
 
 .sectionContainer {
-  width: 80%;
+  width: 90%;
   max-width: 850px;
   margin-bottom: 20px;
 }
 
 .sectionDetail {
-  font-style: italic;
+  font-family: 'PlatypiLightItalic';
   margin: 0 0 0 15px;
 }
 
 .sectionTitle {
   padding: 0;
   margin: 0;
+  font-family: 'PlatypiMedium';
 }
 
 ul {
@@ -43,8 +54,10 @@ ul {
 .itemDescription {
   margin: 0;
 }
+
 .itemTitle {
   font-size: medium;
+  font-family: 'PlatypiMedium';
 }
 
 .dishContainer {
@@ -60,7 +73,7 @@ li {
 }
 
 .imageGalleryContainer {
-  border: 3px black solid;
+  border: 3px solid #792e1b;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 3px;
   margin-top: 60px;

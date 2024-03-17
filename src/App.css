@@ -3,6 +3,16 @@
   src: url('./assets/Platypi-Light.ttf') format('truetype');
 }
 
+@font-face {
+  font-family: 'PlatypiLightItalic';
+  src: url('./assets/Platypi-LightItalic.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'PlatypiMedium';
+  src: url('./assets/Platypi-SemiBold.ttf') format('truetype');
+}
+
 /* Root Level Font */
 #root {
   font-family: 'PlatypiLight', serif;
