@@ -1,16 +1,36 @@
 .aboutContainer {
-  margin: 40px 5%;
-  width: 90%;
-  height: 80%;
+  margin-bottom: 40px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
+.aboutTitle {
+  font-size: 24px;
+  font-family: 'PlatypiMedium';
+}
+
 .aboutTextContainer {
-  width: 50%;
-  margin-top: 20px;
+  width: 95%;
+  margin: 20px 0;
   font-size: large;
   text-align: center;
+}
+
+.aboutTextContainer > p {
+  text-align: left;
+}
+
+.aboutBannerPhoto {
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+}
+
+@media (max-width: 600px) {
+  .aboutBannerPhoto {
+    display: none;
+  }
 }
