@@ -1,6 +1,3 @@
-import { useState, useEffect } from 'react';
-import { db, storage } from '../../firebase-config';
-import { ref as dbRef, onValue as onDbValue } from 'firebase/database';
 import styles from './about.module.css';
 function About() {
   return (
