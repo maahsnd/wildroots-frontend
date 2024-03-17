@@ -37,12 +37,41 @@ function Home() {
         <p>
           Here at Wild Roots kitchen, located on beautiful Vashon Island, we
           focus on making Seasonal, Farm to Table food, most of which is grown
-          on site in the Wild Roots Garden. We offer a wide variety of Soups,
-          Salads, Sandwiches, Prepared Meals and Desserts inspired by what is in
-          peak season in our gardens. Look for us at the Vashon Farmers Market,
-          check out what's in our Farm Stand or find our weekly Menus on
-          Facebook and place an order. We look forward to feeding you!
+          on site in the Wild Roots Garden.
         </p>
+        {/*   <p>
+          {' '}
+ 
+ check out what's in our Farm
+          Stand or find our weekly Menus on Facebook and place an order. We look
+          forward to feeding you!
+        </p> */}
+        <hr />
+        <div className={styles.galleryContainer}>
+          <div className={styles.galleryItem}>
+            <img src="https://source.unsplash.com/Rz8S_P7POfM" alt="" />
+            <h4 className={styles.galleryItemTitle}>Weekly Menus</h4>
+            <p className={styles.galleryItemDescription}>
+              {' '}
+              We offer a wide variety of seasonal Soups, Salads, Sandwiches,
+              Prepared Meals and Desserts.
+            </p>
+          </div>
+          <div className={styles.galleryItem}>
+            <img src="https://source.unsplash.com/g3QLvRGoR54" alt="" />
+            <h4 className={styles.galleryItemTitle}>Farm Stand</h4>
+            <p className={styles.galleryItemDescription}>
+              Locally grown herbs, flowers and produce and so much more!
+            </p>
+          </div>
+          <div className={styles.galleryItem}>
+            <img src="https://source.unsplash.com/6DsMsaoFmqY" alt="" />
+            <h4 className={styles.galleryItemTitle}>Farmer's Market</h4>
+            <p className={styles.galleryItemDescription}>
+              Look for us at the Vashon Farmers Market!
+            </p>
+          </div>
+        </div>
         <hr />
         <p>Our weekly menu is posted under the menu tab every Sunday.</p>
       </div>

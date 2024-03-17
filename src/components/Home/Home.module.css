@@ -20,6 +20,36 @@
   text-align: center;
 }
 
+.galleryContainer {
+  margin: 60px 0 30px;
+  display: flex;
+  justify-content: space-around;
+  align-content: space-around;
+}
+
+.galleryItem > img {
+  border-radius: 50%;
+  height: 300px;
+  width: 300px;
+  object-fit: cover;
+}
+
+.galleryItem {
+  display: column;
+  width: 300px;
+  height: 500px;
+  text-align: center;
+  margin: 10px 0;
+}
+
+.galleryItemTitle {
+  font-size: 20px;
+}
+
+.galleryItemDescription {
+  font-size: 16px;
+}
+
 hr {
   background-color: #792e1b;
   height: 2px;
@@ -28,5 +58,9 @@ hr {
 @media (max-width: 600px) {
   .homePhoto {
     display: none;
+  }
+  .galleryContainer {
+    flex-direction: column;
+    align-items: center;
   }
 }
