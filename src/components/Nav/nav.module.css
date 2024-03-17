@@ -20,9 +20,17 @@
 }
 
 .navbar {
-  height: min-content;
-  position: relative;
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  z-index: 1000;
   box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.5);
+  transition: background-color 0.3s ease;
+}
+
+.transparent {
+  background-color: #ffffff55 !important; /* Ensure it overrides any other background color */
+  box-shadow: none; /* Remove box shadow when transparent */
 }
 
 .logoContainer {
