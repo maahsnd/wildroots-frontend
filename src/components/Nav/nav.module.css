@@ -62,6 +62,7 @@
   display: flex;
   justify-content: center;
   align-items: flex-start;
+  z-index: 10;
 }
 
 .navElements ul {
