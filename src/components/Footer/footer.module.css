@@ -17,6 +17,13 @@ p {
   margin: 5px 0 0;
 }
 
+p > a {
+  text-decoration: underline;
+  color: black;
+}
+p > a:hover {
+  color: #792e1b;
+}
 .facebookIcon {
   margin-top: 15px;
   width: 20px;
