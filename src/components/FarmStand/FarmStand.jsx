@@ -76,18 +76,18 @@ function FarmStand() {
       {content && (
         <>
           <div className={styles.farmStandInfoContainer}>
-            <p className={styles.farmText}>{content.description}</p>
+            <p className={styles.farmText}>{content[0].description}</p>
           </div>
           <hr />
           <div className={styles.farmStandMenuContainer}>
             <div className={styles.textContainer}>
               <h4 className={styles.farmText}>Current offerings</h4>
               <ul>
-                {content.items.map((item) => {
+                {content.slice(1).map((item) => {
                   return (
-                    <li className={styles.farmStandItem} key={item}>
+                    <li className={styles.farmStandItem} key={item.description}>
                       {' '}
-                      {item}{' '}
+                      {item.description}{' '}
                     </li>
                   );
                 })}
