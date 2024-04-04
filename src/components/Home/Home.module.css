@@ -49,6 +49,11 @@
 
 .galleryItemTitle {
   font-size: 20px;
+  color: rgb(33, 53, 71);
+}
+
+.galleryItemTitle:hover {
+  color: #792e1b;
 }
 
 .galleryItemDescription {

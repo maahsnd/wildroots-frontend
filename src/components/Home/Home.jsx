@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react';
 import { db, storage } from '../../firebase-config';
 import { ref as dbRef, onValue as onDbValue } from 'firebase/database';
 import styles from './Home.module.css';
+import { NavLink } from 'react-router-dom';
+import Nav from '../Nav/Nav';
 
 function Home() {
   /*   const [content, setContent] = useState(null); */
@@ -43,7 +45,9 @@ function Home() {
         <div className={styles.galleryContainer}>
           <div className={styles.galleryItem}>
             <img src="https://source.unsplash.com/Rz8S_P7POfM" alt="" />
-            <h4 className={styles.galleryItemTitle}>Weekly Menus</h4>
+            <NavLink to="/menu" className={styles.galleryItemTitle}>
+              <h4>Weekly Menus</h4>
+            </NavLink>
             <p className={styles.galleryItemDescription}>
               {' '}
               We offer a wide variety of seasonal Soups, Salads, Sandwiches,
@@ -52,14 +56,20 @@ function Home() {
           </div>
           <div className={styles.galleryItem}>
             <img src="https://source.unsplash.com/g3QLvRGoR54" alt="" />
-            <h4 className={styles.galleryItemTitle}>Farm Stand</h4>
+            <NavLink to="/farm-stand" className={styles.galleryItemTitle}>
+              <h4>Farm Stand</h4>
+            </NavLink>
+
             <p className={styles.galleryItemDescription}>
               Locally grown herbs, flowers and produce and so much more!
             </p>
           </div>
           <div className={styles.galleryItem}>
             <img src="https://source.unsplash.com/6DsMsaoFmqY" alt="" />
-            <h4 className={styles.galleryItemTitle}>Farmer's Market</h4>
+            <NavLink to="/farmers-market" className={styles.galleryItemTitle}>
+              <h4>Farmer's Market</h4>
+            </NavLink>
+
             <p className={styles.galleryItemDescription}>
               Look for us at the Vashon Farmers Market!
             </p>
