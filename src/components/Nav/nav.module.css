@@ -32,6 +32,13 @@
   height: 0px;
 }
 
+.navbar {
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  z-index: 1000;
+}
+
 .menuIcon {
   display: none;
   height: 40px;
@@ -108,7 +115,6 @@
 
   .navbar {
     height: min-content;
-    position: relative;
     box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.5);
   }
 
