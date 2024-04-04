@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { db, storage } from '../../firebase-config';
 import { ref as dbRef, onValue as onDbValue } from 'firebase/database';
-import styles from './farm.module.css';
+import styles from './farmStand.module.css';
 import 'react-image-gallery/styles/css/image-gallery.css';
 import ReactImageGallery from 'react-image-gallery';
 import {

@@ -2,7 +2,7 @@ import './App.css';
 import Home from './components/Home/Home';
 import Menu from './components/Menu/Menu';
 import About from './components/About/About';
-import Farm from './components/Farm/Farm';
+import FarmStand from './components/FarmStand/FarmStand';
 import { Routes, Route } from 'react-router-dom';
 import { PublicLayout } from './components/PublicLayout';
 
@@ -13,7 +13,7 @@ export default function App() {
         <Route index element={<Home />} />
         <Route path="/menu" element={<Menu />} />
         <Route path="/about" element={<About />} />
-        <Route path="/farm" element={<Farm />} />
+        <Route path="/farm-stand" element={<FarmStand />} />
       </Route>
     </Routes>
   );
