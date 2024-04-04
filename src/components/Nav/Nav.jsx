@@ -48,11 +48,11 @@ const Nav = () => {
             </li>
             <li>
               <NavLink
-                to="/farm"
+                to="/farm-stand"
                 className={({ isActive }) => (isActive ? styles.active : '')}
                 onClick={() => setShowNavbar(false)}
               >
-                Farm
+                Farm Stand
               </NavLink>
             </li>
             <li>

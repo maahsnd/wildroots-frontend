@@ -10,14 +10,14 @@ import {
   ref as storageRef
 } from 'firebase/storage';
 
-function Farm() {
+function FarmStand() {
   const [content, setContent] = useState(null);
   const [photos, setPhotos] = useState([]);
 
   useEffect(() => {
     const fetchContent = async () => {
       try {
-        const contentRef = dbRef(db, 'general-info/farm');
+        const contentRef = dbRef(db, 'general-info/farmStand');
 
         onDbValue(contentRef, (snapshot) => {
           const contentData = snapshot.val();
@@ -26,7 +26,7 @@ function Farm() {
           }
         });
       } catch (error) {
-        console.error('Error fetching farm data:', error);
+        console.error('Error fetching farm stand data:', error);
       }
     };
 
@@ -36,7 +36,7 @@ function Farm() {
   useEffect(() => {
     const fetchPhotoUrls = async () => {
       try {
-        const folderRef = storageRef(storage, 'farmPhotos'); // Use storageRef to reference the storage folder
+        const folderRef = storageRef(storage, 'farmStandPhotos'); // Use storageRef to reference the storage folder
         const files = await listAllFiles(folderRef);
         const urls = await Promise.all(
           files.items.map(async (fileRef) => {
@@ -76,33 +76,33 @@ function Farm() {
       {content && (
         <>
           <div className={styles.farmStandInfoContainer}>
-            <p className={styles.farmText}>{content[0].description}</p>
+            <p className={styles.farmText}>{content.description}</p>
           </div>
           <hr />
           <div className={styles.farmStandMenuContainer}>
             <div className={styles.textContainer}>
               <h4 className={styles.farmText}>Current offerings</h4>
-              <p className={styles.farmText}> {content[1].description}</p>
+              <ul>
+                {content.items.map((item) => {
+                  return (
+                    <li className={styles.farmStandItem} key={item}>
+                      {' '}
+                      {item}{' '}
+                    </li>
+                  );
+                })}
+              </ul>
             </div>
-            <div className={styles.imageGalleryContainer}>
-              <ReactImageGallery items={photos} />
-            </div>
-          </div>
-
-          {content.length > 2 ? (
-            <>
-              <hr />
-              <div className={styles.farmMiscellaneousContainer}>
-                <p className={styles.farmText}>{content[2].description}</p>
+            {photos.length > 0 && (
+              <div className={styles.imageGalleryContainer}>
+                <ReactImageGallery items={photos} />
               </div>
-            </>
-          ) : (
-            <></>
-          )}
+            )}
+          </div>
         </>
       )}
     </div>
   );
 }
 
-export default Farm;
+export default FarmStand;

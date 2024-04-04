@@ -62,7 +62,6 @@ function Menu() {
 
   return (
     <div className={styles.menuContainer}>
-      <h1 className={styles.menuTitle}></h1>
       {menu ? (
         <>
           <p className={styles.orderingInstructions}>

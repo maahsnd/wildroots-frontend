@@ -4,10 +4,11 @@ import Footer from './Footer/Footer';
 
 export const PublicLayout = () => {
   return (
-    <>
+    <div className="page-container">
       <Nav />
       <Outlet />
+
       <Footer />
-    </>
+    </div>
   );
 };

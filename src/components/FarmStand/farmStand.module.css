@@ -1,6 +1,7 @@
 .farmContainer {
   margin: 20px 0 40px;
   width: calc(100% - 20px);
+  height: fit-content;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -45,6 +46,10 @@ hr {
   color: black;
   height: 2px;
   width: 100%;
+}
+
+.farmStandItem {
+  list-style-type: disc;
 }
 
 .farmStandMenuContainer > .imageGalleryContainer {

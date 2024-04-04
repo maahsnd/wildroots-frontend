@@ -1,7 +1,7 @@
 .siteTitle {
   font-size: xx-large;
   font-style: oblique;
-  margin: 40px 0 20px;
+  margin-bottom: 10px;
   color: #792e1b;
 }
 
@@ -16,13 +16,14 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 160px;
+  height: 110px;
   background-color: #fff;
 }
 
 .logoContainer {
   display: flex;
   align-items: center;
+  height: min-content;
   width: 100%;
   justify-content: space-around;
   background-color: #fff;
@@ -68,8 +69,7 @@
 }
 
 .navElements {
-  width: 100vh;
-  height: 100vw;
+  height: min-content;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -110,7 +110,7 @@
   background-color: #574c4c;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 650px) {
   .navbar,
   .container,
   .logoContainer {
