@@ -11,12 +11,13 @@
 
 .container {
   margin: 0;
-  padding: 0 15px;
+  padding: 15px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 160px;
+  background-color: #fff;
 }
 
 .logoContainer {
@@ -24,6 +25,7 @@
   align-items: center;
   width: 100%;
   justify-content: space-around;
+  background-color: #fff;
 }
 
 .navbar.active,
@@ -33,10 +35,12 @@
 }
 
 .navbar {
+  width: 100%;
   position: sticky;
   top: 0;
   background-color: #fff;
   z-index: 1000;
+  box-shadow: 0 -1.5px 4px white, 0 1.5px 4px rgba(0, 0, 0, 0.5);
 }
 
 .menuIcon {
@@ -110,12 +114,7 @@
   .navbar,
   .container,
   .logoContainer {
-    height: 120px;
-  }
-
-  .navbar {
     height: min-content;
-    box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.5);
   }
 
   .siteTitle {
@@ -130,7 +129,6 @@
   .logoContainer {
     justify-content: center;
     align-items: flex-end;
-    margin-bottom: 10px;
   }
   .navElements ul li:not(:last-child) {
     margin-right: 30px;
@@ -168,11 +166,6 @@
 
 @media (min-width: 1000px) {
   .navbar {
-    position: sticky;
-    top: 0;
-    background-color: #fff;
-    z-index: 1000;
-    box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.5);
     transition: background-color 0.3s ease;
   }
 }
