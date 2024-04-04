@@ -57,6 +57,15 @@ const Nav = () => {
             </li>
             <li>
               <NavLink
+                to="/farmers-market"
+                className={({ isActive }) => (isActive ? styles.active : '')}
+                onClick={() => setShowNavbar(false)}
+              >
+                Farmers Market
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
                 to="/about"
                 className={({ isActive }) => (isActive ? styles.active : '')}
                 onClick={() => setShowNavbar(false)}
