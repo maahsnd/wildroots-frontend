@@ -1,6 +1,7 @@
 .farmContainer {
-  margin: 20px 0 40px;
+  margin: 20px 10px 40px;
   width: calc(100% - 20px);
+  max-width: 1650px;
   height: fit-content;
   display: flex;
   flex-direction: column;
@@ -33,7 +34,7 @@
 }
 
 .farmText {
-  width: 100%;
+  width: calc(100% - 20px);
   text-align: left;
 }
 

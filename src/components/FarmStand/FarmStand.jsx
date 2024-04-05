@@ -81,7 +81,7 @@ function FarmStand() {
           <hr />
           <div className={styles.farmStandMenuContainer}>
             <div className={styles.itemContainer}>
-              <h4 className={styles.farmText}>Current offerings</h4>
+              <h4 className={styles.farmText}>What's in stock now:</h4>
               <ul>
                 {content.slice(1).map((item) => {
                   return (
