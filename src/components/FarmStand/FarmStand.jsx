@@ -67,10 +67,11 @@ function FarmStand() {
         <p className={styles.farmText}>
           At Wild Roots Farm and Garden we take joy in producing locally grown
           Vegetables, Fruits, Herbs and Flowers that are used at Wild Roots
-          Kitchen and offered to the community in our Farm Stand. Seasonal
-          produce is grown using organic and permaculture methods that make the
-          most of our Northwest Climate and habitats. We are excited to share
-          what we grow with our community, and hope to see you soon.
+          Kitchen and offered to the community in our Farm Stand, and at the
+          Farmer's market. Seasonal produce is grown using organic and
+          permaculture methods that make the most of our Northwest Climate and
+          habitats. We are excited to share what we grow with our community, and
+          hope to see you soon.
         </p>
       </div>
       {content && (

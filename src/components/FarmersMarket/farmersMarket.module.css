@@ -1,5 +1,5 @@
 .farmContainer {
-  margin: 20px 10px 40px;
+  margin: 20px 0px 40px;
   width: calc(100% - 20px);
   max-width: 1650px;
   height: fit-content;
@@ -7,6 +7,10 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+}
+
+.farmTitle {
+  margin: 20px 0;
 }
 
 .farmStandInfoContainer {
@@ -28,7 +32,6 @@
   text-align: center;
 }
 
-.farmTitle,
 .farmText {
   margin: 10px;
 }
