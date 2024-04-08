@@ -87,6 +87,10 @@
   margin: 5px 15px;
 }
 
+.navElements ul li a:hover {
+  color: #792e1b;
+}
+
 .navElements ul a {
   font-size: 22px;
   font-weight: 400;
