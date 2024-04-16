@@ -36,3 +36,16 @@ body {
   height: 100%;
   margin: 0;
 }
+@media (prefers-color-scheme: dark) {
+  a > * {
+    color: white; /* Makes links white in dark mode */
+  }
+
+  div > p > a {
+    color: white; /* Makes links white in dark mode */
+  }
+
+  p > span > a {
+    color: white; /* Makes links white in dark mode */
+  }
+}

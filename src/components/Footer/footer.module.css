@@ -33,3 +33,13 @@ p > a:hover {
   height: 20px;
   object-fit: cover;
 }
+
+@media (prefers-color-scheme: dark) {
+  .facebookIcon {
+    background-color: white;
+    border-radius: 5px;
+  }
+  h5 {
+    color: white;
+  }
+}
