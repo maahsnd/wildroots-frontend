@@ -18,11 +18,12 @@ function Home() {
         <hr />
         <div className={styles.galleryContainer}>
           <div className={styles.galleryItem}>
-            <img
-              src="https://res.cloudinary.com/dscsiijis/image/upload/c_scale,e_sharpen:100,q_100,w_300/v1712589705/wildRoots/salad_f7bzxs.jpg"
-              alt=""
-            />
             <NavLink to="/menu" className={styles.galleryItemTitle}>
+              <img
+                className={styles.galleryImage}
+                src="https://res.cloudinary.com/dscsiijis/image/upload/c_scale,e_sharpen:100,q_100,w_300/v1712589705/wildRoots/salad_f7bzxs.jpg"
+                alt=""
+              />
               <h4>Weekly Menus</h4>
             </NavLink>
             <p className={styles.galleryItemDescription}>
@@ -32,11 +33,12 @@ function Home() {
             </p>
           </div>
           <div className={styles.galleryItem}>
-            <img
-              src="https://res.cloudinary.com/dscsiijis/image/upload/c_scale,e_sharpen:100,q_100,w_400/v1712589524/wildRoots/honey_crisp_shelf_berhqj.jpg"
-              alt=""
-            />
             <NavLink to="/farm-stand" className={styles.galleryItemTitle}>
+              <img
+                className={styles.galleryImage}
+                src="https://res.cloudinary.com/dscsiijis/image/upload/c_scale,e_sharpen:100,q_100,w_400/v1712589524/wildRoots/honey_crisp_shelf_berhqj.jpg"
+                alt=""
+              />
               <h4>Farm Stand</h4>
             </NavLink>
 
@@ -45,11 +47,12 @@ function Home() {
             </p>
           </div>
           <div className={styles.galleryItem}>
-            <img
-              src="https://res.cloudinary.com/dscsiijis/image/upload/c_scale,e_sharpen:100,q_100,w_400/v1712589537/wildRoots/farm_stand_dahlias_hg3slj.jpg"
-              alt=""
-            />
             <NavLink to="/farmers-market" className={styles.galleryItemTitle}>
+              <img
+                className={styles.galleryImage}
+                src="https://res.cloudinary.com/dscsiijis/image/upload/c_scale,e_sharpen:100,q_100,w_400/v1712589537/wildRoots/farm_stand_dahlias_hg3slj.jpg"
+                alt=""
+              />
               <h4>Farmer's Market</h4>
             </NavLink>
 

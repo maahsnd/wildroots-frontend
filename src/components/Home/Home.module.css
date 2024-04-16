@@ -35,7 +35,7 @@
   align-content: space-around;
 }
 
-.galleryItem > img {
+.galleryImage {
   border-radius: 50%;
   height: 300px;
   width: 300px;
