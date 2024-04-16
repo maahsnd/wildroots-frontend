@@ -98,7 +98,7 @@ hr {
   color: var(--primary-color);
 }
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   .homePhoto {
     display: none;
   }
@@ -114,9 +114,16 @@ hr {
   }
 }
 
-@media (max-width: 950px) and (min-width: 650px) {
+@media (max-width: 1200px) and (min-width: 650px) {
   .logo {
-    width: 400px;
+    width: 500px;
     height: auto;
+  }
+}
+
+@media (min-width: 1300px) {
+  .logo {
+    width: 600px;
+    top: 25%;
   }
 }

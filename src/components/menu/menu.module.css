@@ -21,6 +21,10 @@ span > a {
   text-decoration: underline;
 }
 
+span > a:hover {
+  color: var(--primary-color);
+}
+
 .menuSection {
   display: flex;
   flex-direction: column;
