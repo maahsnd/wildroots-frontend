@@ -67,7 +67,10 @@ function Home() {
         </div>
         <hr />
         <div className={styles.menuBlurb}>
-          <p>Our weekly menu is posted under the menu tab every Sunday.</p>
+          <p>
+            Our weekly <NavLink to="/menu">menu</NavLink> is posted under the{' '}
+            menu tab every Sunday.
+          </p>
           <p>We look forward to feeding you!</p>
         </div>
       </div>

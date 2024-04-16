@@ -89,6 +89,15 @@ hr {
   margin: 30px 0;
 }
 
+.menuBlurb > p > a {
+  font-size: inherit;
+}
+
+.menuBlurb > p > a:hover {
+  cursor: pointer;
+  color: var(--primary-color);
+}
+
 @media (max-width: 600px) {
   .homePhoto {
     display: none;
