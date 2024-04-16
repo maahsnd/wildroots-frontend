@@ -16,7 +16,7 @@
   background-color: rgba(255, 255, 255, 0.619);
   border-radius: 50%;
   position: absolute; /* Absolute position within the relative container */
-  top: 25%; /* Center vertically */
+  top: 20%; /* Center vertically */
   left: 50%; /* Center horizontally */
   transform: translate(-50%, -50%); /* Adjust positioning to true center */
   max-width: 100%; /* Optional: Ensure the logo doesn't overflow the container */
@@ -96,5 +96,18 @@ hr {
   .galleryContainer {
     flex-direction: column;
     align-items: center;
+  }
+  .homeMainCaption {
+    padding-top: 425px;
+  }
+  .logo {
+    top: 225px;
+  }
+}
+
+@media (max-width: 950px) and (min-width: 650px) {
+  .logo {
+    width: 400px;
+    height: auto;
   }
 }
