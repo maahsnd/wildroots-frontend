@@ -5,6 +5,10 @@ function Home() {
   return (
     <div className={styles.homeContainer}>
       <img
+        className={styles.logo}
+        src="https://res.cloudinary.com/dscsiijis/image/upload/c_scale,q_100,w_480/v1713302433/wildRoots/2_umltsn.png"
+      />
+      <img
         className={styles.homePhoto}
         src="https://source.unsplash.com/DUPFowqI6oI"
         alt="Generic pastoral photo"

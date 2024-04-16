@@ -1,4 +1,7 @@
+@import '../variables.modules.css';
+
 .homeContainer {
+  position: relative; /* Make the container relative to position its children absolutely */
   margin: 0px;
   width: calc(100% - 10px);
   height: min-content;
@@ -8,12 +11,25 @@
   align-items: center;
 }
 
+.logo {
+  z-index: 10; /* Ensure the logo is above the homePhoto */
+  background-color: rgba(255, 255, 255, 0.619);
+  border-radius: 50%;
+  position: absolute; /* Absolute position within the relative container */
+  top: 25%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Adjust positioning to true center */
+  max-width: 100%; /* Optional: Ensure the logo doesn't overflow the container */
+  height: auto; /* Maintain aspect ratio */
+}
+
 .homePhoto {
   width: 100%;
   min-height: 600px;
   max-height: 1000px;
   max-width: 1650px;
   object-fit: cover;
+  position: relative; /* Ensures that the photo is part of the flow */
 }
 
 .homeTextContainer {
@@ -57,7 +73,7 @@
 }
 
 .galleryItemTitle:hover {
-  color: #792e1b;
+  color: var(--primary-color);
 }
 
 .galleryItemDescription {
@@ -65,7 +81,7 @@
 }
 
 hr {
-  background-color: #792e1b;
+  background-color: var(--primary-color);
   height: 2px;
 }
 

@@ -1,3 +1,5 @@
+@import '../variables.modules.css';
+
 .farmContainer {
   margin: 20px 0 40px;
   max-width: 1650px;
@@ -63,7 +65,7 @@ hr {
 }
 
 .farmStandMenuContainer > .imageGalleryContainer {
-  border: 3px solid #792e1b;
+  border: 3px solid var(--primary-color);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 3px;
   margin-top: 30px;
@@ -76,7 +78,7 @@ hr {
 }
 
 .farmMiscellaneousContainer {
-  border: #792e1b 2px solid;
+  border: var(--primary-color) 2px solid;
   padding: 10px;
   width: 90%;
 }

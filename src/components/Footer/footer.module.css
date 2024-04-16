@@ -1,3 +1,5 @@
+@import '../variables.modules.css';
+
 .footerContainer {
   width: 100%;
   display: flex;
@@ -10,7 +12,7 @@
 
 h5 {
   font-size: 20px;
-  color: #792e1b;
+  color: var(--primary-color);
   margin: 0 0 10px;
 }
 
@@ -23,7 +25,7 @@ p > a {
   color: black;
 }
 p > a:hover {
-  color: #792e1b;
+  color: var(--primary-color);
 }
 .facebookIcon {
   margin-top: 15px;
