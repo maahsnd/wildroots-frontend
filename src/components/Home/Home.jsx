@@ -1,33 +1,7 @@
-import { useState, useEffect } from 'react';
-import { db, storage } from '../../firebase-config';
-import { ref as dbRef, onValue as onDbValue } from 'firebase/database';
 import styles from './Home.module.css';
 import { NavLink } from 'react-router-dom';
-import Nav from '../Nav/Nav';
 
 function Home() {
-  /*   const [content, setContent] = useState(null); */
-  /* 
-  useEffect(() => {
-    const fetchContent = async () => {
-      try {
-        const contentRef = dbRef(db, 'general-info/home');
-
-        onDbValue(contentRef, (snapshot) => {
-          const contentData = snapshot.val();
-          console.log(contentData);
-          if (contentData) {
-            setContent(contentData);
-          }
-        });
-      } catch (error) {
-        console.error('Error fetching home data:', error);
-      }
-    };
-
-    fetchContent();
-  }, []); */
-
   return (
     <div className={styles.homeContainer}>
       <img
