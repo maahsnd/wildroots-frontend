@@ -3,7 +3,7 @@ import styles from './footer.module.css';
 function Footer() {
   return (
     <div className={styles.footerContainer}>
-      <h5>Wild Roots Farm and Kitchen</h5>
+      <h5>Wild Roots Kitchen and Farm</h5>
       <p>(503) 473-4349</p>
       <p>
         <a href="mailto:WildRootsKitchenVashon@gmail.com">

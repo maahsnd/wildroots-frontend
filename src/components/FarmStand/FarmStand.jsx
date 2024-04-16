@@ -65,7 +65,7 @@ function FarmStand() {
       <div className={styles.farmInfoContainer}>
         <h3 className={styles.farmTitle}>Local Food For Local Folks!</h3>
         <p className={styles.farmText}>
-          At Wild Roots Farm and Garden we take joy in producing locally grown
+          At Wild Roots Kitchen and Farm we take joy in producing locally grown
           Vegetables, Fruits, Herbs and Flowers that are used at Wild Roots
           Kitchen and offered to the community in our Farm Stand, and at the
           Farmer's market. Seasonal produce is grown using organic and

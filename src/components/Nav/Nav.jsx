@@ -10,7 +10,7 @@ const Nav = () => {
       <div className={`${styles.container}`}>
         <div className={`${styles.logoContainer}`}>
           <NavLink to="/" className={styles.siteTitle}>
-            Wild Roots Farm and Kitchen
+            Wild Roots Kitchen and Farm
           </NavLink>
           <div
             className={styles.menuIcon}
