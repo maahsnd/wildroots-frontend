@@ -66,15 +66,23 @@ function Menu() {
         <>
           <p className={styles.orderingInstructions}>
             Food is available to order for pick up at our Farm Stand on
-            Wednesday, Thursday and Friday. Orders must be placed by 8 pm
-            Tuesday. You can place your order by emailing us at{' '}
+            Wednesday, Thursday and Friday.
+            <br />
+            Orders must be placed by 8 pm Tuesday.
+            <br />
+            You can place your order via email:{' '}
             <span>
               <a href="mailto:WildRootsKitchenVashon@gmail.com">
-                WildRootsKitchenVashon@gmail.com
-              </a>{' '}
+                WildRootsKitchenVashon@gmail.com{' '}
+              </a>
             </span>
-            or texting us 503-473-4349. We prefer electronic payment at this
-            time, and accept Zelle and Venmo.{' '}
+            or text:
+            <span>
+              <a href="sms:+15034734349"> 503-473-4349 </a>{' '}
+            </span>
+            <br />
+            We prefer electronic payment at this time, and accept Zelle and
+            Venmo.
           </p>
           {/* Display menu section content */}
           {menu.sections.map((section) => (
