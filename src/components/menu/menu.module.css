@@ -14,6 +14,11 @@
   font-family: 'PlatypiLightItalic';
 }
 
+span > a {
+  color: black;
+  text-decoration: underline;
+}
+
 .menuSection {
   display: flex;
   flex-direction: column;
