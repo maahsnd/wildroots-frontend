@@ -19,7 +19,7 @@
   top: 20%; /* Center vertically */
   left: 50%; /* Center horizontally */
   transform: translate(-50%, -50%); /* Adjust positioning to true center */
-  max-width: 100%; /* Optional: Ensure the logo doesn't overflow the container */
+  max-width: 600px; /* Optional: Ensure the logo doesn't overflow the container */
   height: auto; /* Maintain aspect ratio */
 }
 

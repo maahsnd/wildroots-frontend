@@ -6,7 +6,8 @@ function Home() {
     <div className={styles.homeContainer}>
       <img
         className={styles.logo}
-        src="https://res.cloudinary.com/dscsiijis/image/upload/c_scale,q_100,w_600/v1713302433/wildRoots/2_umltsn.png"
+        src="https://res.cloudinary.com/dscsiijis/image/upload/c_scale,q_100,w_1000/v1713313180/wildRoots/wildrootslogo_cedway.png"
+        alt="Wild Roots Logo"
       />
       <img
         className={styles.homePhoto}
