@@ -111,10 +111,12 @@ hr {
   }
   .logo {
     top: 225px;
+    width: 80%;
+    height: auto;
   }
 }
 
-@media (max-width: 1200px) and (min-width: 650px) {
+@media (max-width: 1200px) and (min-width: 700px) {
   .logo {
     width: 500px;
     height: auto;
