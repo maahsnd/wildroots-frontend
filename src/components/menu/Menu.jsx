@@ -68,6 +68,7 @@ function Menu() {
             Food is available to order for pick up at our Farm Stand on
             Wednesday, Thursday and Friday.
             <br />
+            <br />
             Orders must be placed by 8 pm Tuesday.
             <br />
             You can place your order via email:{' '}
@@ -80,6 +81,7 @@ function Menu() {
             <span>
               <a href="sms:+15034734349"> 503-473-4349 </a>{' '}
             </span>
+            <br />
             <br />
             We prefer electronic payment at this time, and accept Zelle and
             Venmo.
