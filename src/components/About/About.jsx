@@ -20,7 +20,7 @@ function About() {
           2003 to purchase a 20 acre farm and establish my Catering Company and
           Farm. My family moved to Vashon in 2012, and I have been building Wild
           Roots Farm and Kitchen ever since. I love to grow our own foods, make
-          healthy delicious meals fand offer fresh, local produce to the Vashon
+          healthy delicious meals and offer fresh, local produce to the Vashon
           Community
         </p>
       </div>
