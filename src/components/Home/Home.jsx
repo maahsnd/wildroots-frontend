@@ -9,11 +9,15 @@ function Home() {
         src="https://res.cloudinary.com/dscsiijis/image/upload/c_scale,q_100,w_1000/v1713313180/wildRoots/wildrootslogo_cedway.png"
         alt="Wild Roots Logo"
       />
-      <img
-        className={styles.homePhoto}
-        src="https://source.unsplash.com/DUPFowqI6oI"
-        alt="Generic pastoral photo"
-      />
+      <div className={styles.homePhoto}>
+        <img
+          className={styles.homePhoto}
+          src="https://res.cloudinary.com/dscsiijis/image/upload/v1713744010/wildRoots/437583841_1077254886710527_7048450739019885853_n-1_uzbjzk.jpg"
+          alt="Aerial photo of Vashon Island"
+        />
+        <span>Photo credit: Maisie Starr</span>
+      </div>
+
       <div className={styles.homeTextContainer}>
         <p className={styles.homeMainCaption}>
           Here at Wild Roots kitchen, located on beautiful Vashon Island, we
