@@ -12,7 +12,7 @@ function Home() {
 
       <img
         className={styles.homePhoto}
-        src="https://source.unsplash.com/DUPFowqI6oI"
+        src="https://res.cloudinary.com/dscsiijis/image/upload/v1713752348/wildRoots/steven-weeks-DUPFowqI6oI-unsplash_ii2xls_c_pad_w_1650_hcg0bo.jpg"
         alt="Row of young corn at soil level"
       />
 
