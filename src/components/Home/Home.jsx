@@ -9,14 +9,12 @@ function Home() {
         src="https://res.cloudinary.com/dscsiijis/image/upload/c_scale,q_100,w_1000/v1713313180/wildRoots/wildrootslogo_cedway.png"
         alt="Wild Roots Logo"
       />
-      <div className={styles.homePhoto}>
-        <img
-          className={styles.homePhoto}
-          src="https://res.cloudinary.com/dscsiijis/image/upload/v1713744010/wildRoots/437583841_1077254886710527_7048450739019885853_n-1_uzbjzk.jpg"
-          alt="Aerial photo of Vashon Island"
-        />
-        <span>Photo credit: Maisie Starr</span>
-      </div>
+
+      <img
+        className={styles.homePhoto}
+        src="https://source.unsplash.com/DUPFowqI6oI"
+        alt="Row of young corn at soil level"
+      />
 
       <div className={styles.homeTextContainer}>
         <p className={styles.homeMainCaption}>

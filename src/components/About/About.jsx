@@ -2,11 +2,14 @@ import styles from './about.module.css';
 function About() {
   return (
     <div className={styles.aboutContainer}>
-      <img
-        className={styles.aboutBannerPhoto}
-        src="https://source.unsplash.com/EwKXn5CapA4"
-        alt=""
-      />
+      <div className={styles.aboutBannerPhoto}>
+        <img
+          className={styles.aboutBannerPhoto}
+          src="https://res.cloudinary.com/dscsiijis/image/upload/v1713744010/wildRoots/437583841_1077254886710527_7048450739019885853_n-1_uzbjzk.jpg"
+          alt="Aerial photo of Vashon Island"
+        />
+        <span>Photo credit: Maisie Starr</span>
+      </div>
 
       <h3 className={styles.aboutTitle}>Meet the Owner</h3>
       <hr />

@@ -30,6 +30,8 @@
   height: 600px;
   object-fit: cover;
   max-width: 1650px;
+  font-size: medium;
+  text-align: right;
 }
 
 @media (max-width: 600px) {
