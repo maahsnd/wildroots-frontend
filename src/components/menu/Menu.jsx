@@ -65,8 +65,8 @@ function Menu() {
       {menu ? (
         <>
           <p className={styles.orderingInstructions}>
-            Food is available to order for pick up at our Farm Stand on
-            Wednesday, Thursday and Friday.
+            Food is available to order for pick up at our Farm Stand on Thursday
+            and Friday, and at the Farmers Market on Saturday.
             <br />
             <br />
             Orders must be placed by 8 pm Tuesday.
