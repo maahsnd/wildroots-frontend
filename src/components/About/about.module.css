@@ -34,6 +34,10 @@
   text-align: right;
 }
 
+.aboutBannerPhoto > span {
+  margin-right: 8px;
+}
+
 @media (max-width: 600px) {
   .aboutBannerPhoto {
     display: none;
